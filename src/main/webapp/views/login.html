@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customer Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+      <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap"
+            rel="stylesheet"
+          />
+</meta>
+<style>
+.slideshow-container {
+    max-width: 40%;
+min-width:40%;
+    position: relative;
+    margin-left:25px;
+margin-right:25px;
+float:left;
+  }
+.mySlides fade img{
+max-width:40%;
+min-width:40%;
+}
+body{
+background-image:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgIBwgHBwgHBwcHBwoHBwcHBw8ICQgKFREWIiAREx8YHCggGBolGx8fITEhJSkrLi4uFx8zODMtNygtOisBCgoKDQ0NDg0PECsZFRkrKysrLSs3KysrKysrKysrKysrKysrKysrKysrKysrKysrKystKysrKysrLS0rKys3K//AABEIAKABOwMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAAAAgEFB//EABYQAQEBAAAAAAAAAAAAAAAAAAABEf/EABoBAQADAQEBAAAAAAAAAAAAAAABAgQDBgX/xAAXEQEBAQEAAAAAAAAAAAAAAAAAAQIR/9oADAMBAAIRAxEAPwD1QBxfSAAAAAAAAAAAAAAAAAAAAAAAAGyEipE8V1rjJFSEipFpGfWyRUhIqReRn1tkipGyNkWkZ9bJFSEjV5HDWgBKgADngMb0gAAAAAAAAAAAAAAAAAAAAAA2RsipFpHPWmSKkJFSLSOGtkipCRUi0jNrbJFSEipF5GfWyRUhgs4XXQBKAAAAHPAY3pAAAAAAAAAAAAAAAAAAAGyJLWSKkbI2RMjlrZIqQkVIvIz62SNkbIqRaRn1tkipCRUi0jNrZI0FnK3oAlAAAAAADngMb0gAAAAAAAAAAAAAAAACpEot4yRUhIqRaRx1skVISKkWkZ9bZIqRsjZF5GfWyRUhIqRaRn1skAS5ACQAAAAAAABzwGN6QAAAAAAAAAAAAAAJGyNkTxW64SKkJFSLSOGtkjZGyKkXkZ9bZIqQkVItIz62SKkJGryM+tACVAAAAAAAAAAAAHPAY3pAAAAAAAAAAAABshIqRaRTWiRUhIqRaRn1tkipGyKkWkZ9bZIqQkVIvIz62SNkbgtxwuugCVQAAAAAAAAAAAAAHPAY3pAAAAAAAAAGyJGSKkJFSJkctbJFSEipFpGfW2SKkbI2ReRn1skVISKkWkZ9bJGgs429AEoAAAAAAAAAAAAAAAAc8BjekAAAAAAAbIlFvCRUhIqRaRx1skbI2RUi0jPrbJFSEipFpGfWyRUhIqReRn1tkjQS5WgCQAAAAAAAAAAAAAAAAABzwGN6QAAAAMJFSJ4rdcJFSEipFpHHW2SKkbIqReRm1tkipCRUi0jPrZI2RsjVpGfWgBZQAAAAAAAAAAAAAAAAAAAAABzwGN6QAAbISKkTIprRI2RsipF5HDW2SKkbI2RaRm1skVISKkXkZ9bZIqRsgtxw1roAlUAAAAAAAAAAAAAAAAAAAAAAAB//2Q==');
+background-repeat:false;
+background-size:cover;
+}
+h3{
+text-align:center;
+}    
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+ 
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+
+.row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  margin: 0 -16px;
+
+}
+
+.col-25 {
+  -ms-flex: 25%; 
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; 
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; 
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+max-width:60%;
+margin-left:0px;
+margin-right:0px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+input[type=email] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+input[type=username] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+input[type=password] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+input[type=date] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+input[type=submit]{
+  background-color: #7D3C98;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+span.price {
+  float: right;
+  color: grey;
+}
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+.right a{
+margin-left: 1em;
+}
+
+ 
+.right{
+margin-left:auto;
+margin-right:10px;
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 700px;
+    }
+}
+
+
+.marquee {
+ 
+  font-size:100px;
+  
+}
+
+.marquee a{
+	text-decoration:none;
+}
+.marquee a:hover, a:active{
+	color:red;
+	text-decoration: none;
+}
+.a{
+	text-decoration:none;
+}
+a:hover, a:active{
+	color:red;
+	text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+<br>
+
+<h3>CUSTOMER LOGIN PAGE</h3>
+<br><br>
+<div class="slideshow-container">       
+          <div class="mySlides fade">         
+            <img src="https://images.unsplash.com/photo-1605429523419-d828acb941d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXJ0JTIwZ2FsbGVyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"  width="600" height="500" margin-right: 10px>        
+          </div>        
+          <div class="mySlides fade">       
+            <img src="https://images.unsplash.com/photo-1514195037031-83d60ed3b448?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGFydCUyMGdhbGxlcnl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"  width="600" height="500">
+         </div>          
+          <div class="mySlides fade">         
+            <img src="https://images.unsplash.com/photo-1571179120659-f411b1c2a9ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGFydCUyMGdhbGxlcnl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"  width="600" height="500">       
+          </div>       
+          <div class="mySlides fade">
+          
+            <img src="https://images.unsplash.com/photo-1604762456923-7a61445a1052?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGFydCUyMGdhbGxlcnl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"  width="600" height="500">
+          
+          </div>
+          
+            <div class="mySlides fade ">
+          
+            <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YXJ0JTIwZ2FsbGVyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" width="600" height="500">
+          
+          </div>
+          <br><br>
+   <div >
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  
+</div>
+          </div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+
+</script>
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form  action="customer" method="get" >
+	<marquee behavior="scroll" direction="left" scrollamount="4" style="font-size:17px;">Don't have an account, <a href="register">Click here </a> </marquee>
+
+            <div class="row">
+	
+<div class="col-75">
+<br><br>
+	 <label for="username"><i class="fa fa-envelope"></i> Username</label>
+            <input type="text" name="username" placeholder="This will be your username" required>
+            </div>
+
+<div class="col-75">
+<br>
+ <label for="pw"><i class="fa fa-lock"></i> Password</label>
+            <input type="password" name="password" placeholder="Enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            </div>
+	<br><br><br>  
+	<div class="right">
+	
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" value="Login"><br>
+	
+	</div>
+	
+	
+</div>    
+   
+     </div>
+      </form>
+    </div>
+ </div>
+</div>
+
+</body>
+</html>

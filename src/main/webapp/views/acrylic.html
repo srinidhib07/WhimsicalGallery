@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #7F79BD;
+  margin-left: 50px;
+  margin-right:50px;
+  
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.topnav a:hover {
+  background-color: #7F79BD;
+  color: white;
+}
+
+.topnav a.active {
+  
+  color: white;
+}
+.topnav-right {
+  float: right;
+  color: white;
+  background-color: #7F79BD;
+}
+.bg
+{
+margin-left:50px;
+margin-right:50px;
+width: 1280px;
+height: 500px;
+max-width:2000px;
+
+}
+.dropbtn {
+  background-color: #7F79BD;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #6B4586;
+}
+.desc h3{
+	margin-left: 50px;
+	margin-right: 20px;
+}
+.column {
+	margin-left: 50px;
+	margin-right: 25px;
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.slideshow-container {
+ 
+  position: relative;
+  margin: auto;
+  margin-left:50px;
+margin-right:50px;
+width: 1300px;
+  height: 450px;
+
+}
+
+/* Caption text */
+.text {
+  color: #FFA07A;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.right a{
+margin-left: 1em;
+}
+
+ 
+.right{
+margin-left:1200px;
+margin-right:50px;
+}
+.right a:link, .right a:visited {
+  background-color: #A15BD5;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.right a:hover, .right a:active {
+  background-color: #841BCF;
+}
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+</style>
+<meta charset="ISO-8859-1">
+<title>Acrylic Paintings page</title>
+</head>
+<body>
+<br>
+
+<div class="topnav">
+<a ></a><a ></a><a ></a><a ></a><a ></a><a ></a><a ></a><a ></a><a ></a><a ></a><a ></a><a ></a><a ></a><a ></a><a ></a><a ></a>
+  
+  <a  href><b>Whimsical Gallery</b></a>
+   
+  </div> 
+  <!--  <div class="right">
+	Already have account?<a href="emp_login.html">Login Here</a>
+	</div>
+	-->
+
+
+<br>
+<!--  <div class="bg-img">
+<img src="https://images.unsplash.com/photo-1564399580075-5dfe19c205f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YXJ0JTIwZ2FsbGVyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"  class="bg" >
+</div>
+-->
+<div class="desc">
+<h3>Acrylic Paintings</h3>
+</div>
+<br>
+<div class="row">
+  <div class="column">
+  <div class="card">
+      <img src="https://s31531.pcdn.co/wp-content/uploads/2018/04/Honerlah-Randy_Letting-Go_AcrylicWorks5_artists-network-780x1024.jpg.webp" alt="Avatar" style="width:300px;height:270px;">
+      <center><p> Randy L. Honerlah</p></center>	
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <a href=""><img src="https://s31531.pcdn.co/wp-content/uploads/2018/04/Rimpo-April_Lanterns_AcrylicWorks5_artists-network-768x1039.jpg.webp"alt="Avatar" style="width:300px;height:270px;"></a>
+    <center><p> April M. Rimpo</p></center>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <a href=""><img src="https://s31531.pcdn.co/wp-content/uploads/2018/04/Anderson_FancyFeathers-768x1154.jpg.webp" alt="Avatar" style="width:300px;height:270px;"></a>
+    <center><p> Cher Anderson</p></center>
+    </div>
+  </div>
+  </div>
+</center>
+<br><br>
+
+<br><br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <a href="knowmore1"><img src="https://s31531.pcdn.co/wp-content/uploads/2018/04/York_Butterfly-Effect-1024x737.jpg.webp" alt="Avatar" style="width:300px;height:270px;"></a>
+    	<center><p> Yelena York</p></center>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <a href=""><img src="https://s31531.pcdn.co/wp-content/uploads/2018/04/MartinezJim_UtilityPole-768x1127.jpg.webp" alt="Avatar" style="width:300px;height:270px;"></a>
+    <center><p> Jim Martinez</p></center>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <a href=""><img src="https://s31531.pcdn.co/wp-content/uploads/2018/04/Leonard_Crystal-Blue-Persua-1024x775.jpg.webp" alt="Avatar" style="width:300px;height:270px;"></a>
+    <center><p> Deborah B. Leonard</p></center>
+    </div>
+  </div>
+  </div>
+  <br><br>
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <a href=""><img src="https://s31531.pcdn.co/wp-content/uploads/2018/04/Sweeny_OaxacaSeries5-1024x1020.jpg.webp" alt="Avatar" style="width:300px;height:270px;"></a>
+    	<center><p> Robert Merrill Sweeny </p></center>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <a href=""><img src="https://s31531.pcdn.co/wp-content/uploads/2018/04/Maimon_Storm-1024x842.jpg.webp" alt="Avatar" style="width:300px;height:270px;"></a>
+    <center><p> Yael Maimon </p></center>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <a href=""><img src="https://s31531.pcdn.co/wp-content/uploads/2018/04/Bogart_KeepMovingForward-1024x1024.jpg.webp" alt="Avatar" style="width:300px;height:270px;"></a>
+    <center><p> Darien Bogart </p></center>
+    </div>
+  </div>
+  </div>
+</body>
+</html>
